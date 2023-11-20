@@ -34,21 +34,21 @@ export const SidebarWrapper = () => {
           collapsed: collapsed,
         })}
       >
-        <div className={Sidebar.Header()}>
+        {/* <div className={Sidebar.Header()}>
           <CompaniesDropdown />
-        </div>
+        </div> */}
         <div className="flex flex-col justify-between h-full">
           <div className={Sidebar.Body()}>
-            <SidebarItem
-              title="Home"
-              icon={<HomeIcon />}
-              isActive={router.pathname === "/"}
-              href="/"
-            />
-            <SidebarMenu title="Main Menu">
+            <SidebarMenu title="Menú principal">
               <SidebarItem
-                isActive={router.pathname === "/accounts"}
-                title="Accounts"
+                isActive={router.pathname === "/publicaciones"}
+                title="Publicaciones"
+                icon={<ProductsIcon />}
+                href="publicaciones"
+              />
+              <SidebarItem
+                isActive={router.pathname === "/mi-cuenta"}
+                title="Mi cuenta"
                 icon={<AccountsIcon />}
                 href="accounts"
               />
@@ -66,11 +66,6 @@ export const SidebarWrapper = () => {
                 isActive={router.pathname === "/customers"}
                 title="Customers"
                 icon={<CustomersIcon />}
-              />
-              <SidebarItem
-                isActive={router.pathname === "/products"}
-                title="Products"
-                icon={<ProductsIcon />}
               />
               <SidebarItem
                 isActive={router.pathname === "/reports"}
